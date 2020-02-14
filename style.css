@@ -36,4 +36,6 @@ html {
   [hidden] {
     display: none !important;
   }
-  
+.purple {
+  background-color: blueviolet;
+}  
