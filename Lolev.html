@@ -1,0 +1,65 @@
+<div  id="elm">
+    <img @click='fgh(0)' class="gh" src="http://opgg-static.akamaized.net/images/lol/champion/Azir.png?image=q_auto,w_140&v=1586932751" alt="">
+    <div v-if='list[0].name'>
+        <img class="gh" src="http://opgg-static.akamaized.net/images/lol/passive/Azir_Passive.png?image=q_auto,w_48&v=1586932751" alt="">
+        <img class="gh" src="http://opgg-static.akamaized.net/images/lol/spell/AzirQWrapper.png?image=q_auto,w_48&v=1586932751" alt="">
+        <img class="gh" src="http://opgg-static.akamaized.net/images/lol/spell/AzirW.png?image=q_auto,w_48&v=1586932751" alt="">
+        <img class="gh" src="http://opgg-static.akamaized.net/images/lol/spell/AzirEWrapper.png?image=q_auto,w_48&v=1586932751" alt="">
+    </div>
+
+    <img @click='fgh(1)'  class="gh" src="http://opgg-static.akamaized.net/images/lol/champion/Akali.png?image=q_auto,w_140&v=1586932751" alt="">
+    <div v-if='list[1].name'>
+        <img class="gh" src="http://opgg-static.akamaized.net/images/lol/passive/Akali_P.png?image=q_auto,w_48&v=1586932751" alt="">
+        <img class="gh" src="http://opgg-static.akamaized.net/images/lol/spell/AkaliQ.png?image=q_auto,w_48&v=1586932751" alt="">
+        <img class="gh" src="http://opgg-static.akamaized.net/images/lol/spell/AkaliW.png?image=q_auto,w_48&v=1586932751" alt="">
+        <img class="gh" src="http://opgg-static.akamaized.net/images/lol/spell/AkaliE.png?image=q_auto,w_48&v=1586932751" alt="">
+    </div>
+
+    <img @click='fgh(2)'  class="gh" src="http://opgg-static.akamaized.net/images/lol/champion/Teemo.png?image=q_auto,w_140&v=1586932751" alt="">
+    <div v-if='list[2].name'>
+        <img class="gh" src="http://opgg-static.akamaized.net/images/lol/passive/Teemo_P.png?image=q_auto,w_48&v=1586932751" alt="">
+        <img class="gh" src="http://opgg-static.akamaized.net/images/lol/spell/BlindingDart.png?image=q_auto,w_48&v=1586932751" alt="">
+        <img class="gh" src="http://opgg-static.akamaized.net/images/lol/spell/MoveQuick.png?image=q_auto,w_48&v=1586932751" alt="">
+        <img class="gh" src="http://opgg-static.akamaized.net/images/lol/spell/TeemoRCast.png?image=q_auto,w_48&v=1586932751" alt="">
+    </div>
+
+    <img @click='fgh(3)'  class="gh" src="http://opgg-static.akamaized.net/images/lol/champion/Yuumi.png?image=q_auto,w_140&v=1586932751" alt="">
+    <div v-if='list[3].name'>
+        <img class="gh" src="http://opgg-static.akamaized.net/images/lol/passive/YuumiP.png?image=q_auto,w_48&v=1586932751" alt="">
+        <img class="gh" src="http://opgg-static.akamaized.net/images/lol/spell/YuumiQ.png?image=q_auto,w_48&v=1586932751" alt="">
+        <img class="gh" src="http://opgg-static.akamaized.net/images/lol/spell/YuumiW.png?image=q_auto,w_48&v=1586932751" alt="">
+        <img class="gh" src="http://opgg-static.akamaized.net/images/lol/spell/YuumiE.png?image=q_auto,w_48&v=1586932751" alt="">
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    let app = new Vue({
+        el: '#elm',
+        data: () => ({
+            list: [
+                {name: 0},
+                {name: 0},
+                {name: 0},
+                {name: 0}
+            ],
+            one: 0,
+            two: 0
+        }),
+        methods: {
+            fgh(ert){
+                this.fjk()
+                this.list[ert].name == 1 ? this.list[ert].name = 0 : this.list[ert].name = 1
+            },
+            fjk(){
+                this.list.forEach(e => e.name = 0)
+            }
+            
+        }
+    }) 
+</script>
+<style>
+    .gh {
+        width: 102px;
+        height: 102px;
+    }
+</style>
